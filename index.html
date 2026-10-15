@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Semsari Game | فروشگاه گلد و اکانت وارکرافت</title>
+<meta name="description" content="خرید و فروش گلد، اکانت و گیم‌تایم World of Warcraft با قیمت لحظه‌ای و پرداخت امن">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d12;--card:#141821;--line:#232a36;--gold:#f5c04a;--gold2:#ff9f1c;--txt:#e9edf3;--mut:#8a94a6;--ok:#2ecc71;--bad:#ff5d5d;--ally:#3d8bff;--horde:#e0413c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Vazirmatn,sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:auto;padding:0 16px}
+header{position:sticky;top:0;z-index:9;background:#0b0d12e6;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:20px}.logo b{color:var(--gold)}
+.nav ul{display:flex;gap:22px;list-style:none;color:var(--mut);font-size:14px}
+.nav ul a:hover{color:var(--gold)}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:800;padding:10px 20px;border-radius:10px;border:0;cursor:pointer;font-family:inherit}
+.btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.hero{padding:70px 0 40px;background:radial-gradient(ellipse at top,#2a1f0a 0,transparent 60%)}
+.hero h1{font-size:clamp(28px,5vw,48px);line-height:1.3}.hero h1 span{color:var(--gold)}
+.hero p{color:var(--mut);margin:14px 0 24px;max-width:620px}
+.trust{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.trust div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-size:14px}
+.trust b{color:var(--gold);display:block;font-size:20px}
+.alert{background:#2a1212;border:1px solid #5a2020;color:#ffb3b3;border-radius:12px;padding:12px 16px;margin:20px 0;font-size:14px}
+section{padding:40px 0}
+h2{font-size:26px;margin-bottom:6px}.sub{color:var(--mut);margin-bottom:22px;font-size:14px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{background:var(--card);border:1px solid var(--line);color:var(--mut);padding:7px 14px;border-radius:999px;cursor:pointer;font-family:inherit}
+.tab.on{color:#1a1200;background:var(--gold);border-color:var(--gold)}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:13px 14px;text-align:right;border-bottom:1px solid var(--line);font-size:14px}
+th{color:var(--mut);font-weight:600;background:#10131a}
+.f{font-size:12px;padding:2px 10px;border-radius:99px;font-weight:600}
+.f.a{background:#3d8bff22;color:var(--ally)}.f.h{background:#e0413c22;color:var(--horde)}
+.up{color:var(--ok)}.hot{color:var(--gold2);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;transition:.2s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card h3{font-size:17px;margin-bottom:8px}
+.card .meta{color:var(--mut);font-size:13px}.card .meta div{display:flex;justify-content:space-between;padding:3px 0}
+.price{font-size:22px;font-weight:800;color:var(--gold);margin:12px 0}
+.badge{font-size:11px;background:#2ecc7122;color:var(--ok);padding:2px 8px;border-radius:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;counter-reset:s}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;counter-increment:s}
+.steps div:before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#1a1200;font-weight:800;margin-bottom:10px}
+form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+label{font-size:13px;color:var(--mut)}
+input,select{width:100%;margin-top:6px;padding:10px;background:#0e1118;border:1px solid var(--line);border-radius:10px;color:var(--txt);font-family:inherit}
+.total{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-top:1px solid var(--line);padding-top:14px}
+.total b{color:var(--gold);font-size:22px}
+.track{display:flex;gap:10px;flex-wrap:wrap}.track input{flex:1;min-width:200px;margin:0}
+#tr{margin-top:14px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:13px;text-align:center}
+.demo{position:fixed;bottom:14px;left:14px;background:var(--gold);color:#1a1200;font-size:12px;font-weight:800;padding:6px 12px;border-radius:8px;z-index:10}
+.tableWrap{overflow-x:auto}
+@media(max-width:720px){.nav ul{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<div class="logo">Semsari <b>Game</b></div>
+<ul><li><a href="#gold">قیمت گلد</a></li><li><a href="#acc">اکانت‌ها</a></li><li><a href="#gt">گیم‌تایم</a></li><li><a href="#order">ثبت سفارش</a></li><li><a href="#track">پیگیری</a></li></ul>
+<a class="btn" href="#order">خرید سریع</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+<h1>گلد، اکانت و گیم‌تایم <span>World of Warcraft</span><br>با قیمت لحظه‌ای و تحویل امن</h1>
+<p>Retail، TBC Anniversary، Classic Era و Aion 2. قیمت‌ها زنده آپدیت می‌شن، سفارش ثبت می‌شه و دیگه بعد ۲۴ ساعت گم نمی‌شه. پرداخت تومانی، تتر و رمزینکس.</p>
+<a class="btn" href="#gold">مشاهده قیمت‌ها</a> <a class="btn ghost" href="#sell">فروش گلد به ما</a>
+<div class="trust"><div><b>+۵,۹۰۰</b>عضو دیسکورد</div><div><b>از ۲۰۲۱</b>فعالیت مداوم</div><div><b>۴ بازی</b>WoW / TBC / Era / Aion</div><div><b>تسویه خودکار</b>واریزی‌ها</div></div>
+<div class="alert">⚠️ ما هیچ‌وقت در DM یا داخل بازی پیام نمی‌دیم. قبل از Trade اسم Guild Master رو از <a href="#verify" style="text-decoration:underline">صفحه تأیید هویت</a> چک کنید.</div>
+</div></div>
+
+<section id="gold"><div class="wrap">
+<h2>قیمت لحظه‌ای گلد</h2><p class="sub">آخرین بروزرسانی: همین الان · قیمت‌ها به هزار تومان یا دلار برای هر ۱k گلد (Retail برای هر ۱M)</p>
+<div class="tabs" id="gt-tabs"><button class="tab on" data-g="all">همه</button><button class="tab" data-g="tbc">TBC Anniversary</button><button class="tab" data-g="era">Classic Era</button><button class="tab" data-g="retail">Retail</button><button class="tab" data-g="aion">Aion 2</button></div>
+<div class="tableWrap"><table><thead><tr><th>سرور</th><th>فکشن</th><th>واحد</th><th>قیمت تومانی</th><th>قیمت دلاری</th><th></th></tr></thead><tbody id="gtb"></tbody></table></div>
+</div></section>
+
+<section id="sell"><div class="wrap">
+<h2>فروش گلد به Semsari</h2><p class="sub">خرید Retail EU از شما با سه روش تسویه</p>
+<div class="grid">
+<div class="card"><h3>پرداخت آنی</h3><div class="price">۲۹$ / 1M</div><div class="meta">تتر یا رمزینکس بدون کارمزد</div></div>
+<div class="card"><h3>پرداخت ۲۴ ساعته</h3><div class="price">۷,۶۰۰ / 1M</div><div class="meta">هزار تومان، واریز به حساب</div></div>
+<div class="card"><h3>کارت به کارت</h3><div class="price">۷,۵۰۰ / 1M</div><div class="meta">هزار تومان</div></div>
+</div></div></section>
+
+<section id="acc"><div class="wrap">
+<h2>بازار اکانت</h2><p class="sub">آگهی‌ها مثل دیسکورد بعد از ۲۴ ساعت پاک نمی‌شن. همه قابل فیلتر و جستجو هستن.</p>
+<div class="grid" id="accs"></div>
+</div></section>
+
+<section id="gt"><div class="wrap">
+<h2>گیم‌تایم و نسخه‌ها</h2><p class="sub">خرید روی اکانت خودتان یا اکانت اوکراین با تحویل فوری</p>
+<div class="grid">
+<div class="card"><span class="badge">پرفروش</span><h3>اشتراک ۱ ماهه</h3><div class="price">۲,۵۵۰ هزار ت</div><div class="meta">روی اکانت شما (نباید گیم‌تایم فعال داشته باشید)</div></div>
+<div class="card"><h3>Midnight Epic Edition</h3><div class="price">استعلام</div><div class="meta">شامل Warwithin و بوست ۸۰</div></div>
+<div class="card"><h3>اکانت اوکراین</h3><div class="price">تحویل فوری</div><div class="meta">آماده بازی، ایمیل اورجینال</div></div>
+<div class="card"><h3>ExitLag</h3><div class="price">استعلام</div><div class="meta">کاهش پینگ برای سرورهای EU</div></div>
+</div></div></section>
+
+<section id="order"><div class="wrap">
+<h2>ثبت سفارش</h2><p class="sub">سفارش ثبت می‌شه، کد پیگیری می‌گیرید و ادمین بهتون پیام می‌ده</p>
+<form onsubmit="return sub(event)">
+<label>بازی و سرور<select id="srv"></select></label>
+<label>مقدار (k)<input id="amt" type="number" value="10" min="1"></label>
+<label>نام کاراکتر<input required placeholder="مثلاً Thrall"></label>
+<label>روش پرداخت<select><option>کارت به کارت</option><option>درگاه بانکی</option><option>تتر (TRC20)</option><option>رمزینکس</option></select></label>
+<div class="total"><span>مبلغ قابل پرداخت: <b id="tot">-</b></span><button class="btn">ثبت سفارش</button></div>
+</form></div></section>
+
+<section id="track"><div class="wrap">
+<h2>پیگیری سفارش</h2><p class="sub">کد سفارش را وارد کنید</p>
+<div class="track"><input id="code" placeholder="SG-48213"><button class="btn" onclick="trk()">پیگیری</button></div>
+<div id="tr"></div></div></section>
+
+<section id="verify"><div class="wrap">
+<h2>تأیید هویت ادمین‌ها و گیلدها</h2><p class="sub">جلوی کلاهبردارهایی که اسم گیلد رو کپی می‌کنن</p>
+<div class="track"><input id="vq" placeholder="اسم گیلد، کاراکتر یا آیدی تلگرام"><button class="btn" onclick="vf()">بررسی</button></div><div id="vr" style="margin-top:14px"></div>
+</div></section>
+
+<footer>© Semsari Game · تلگرام: alienzo · بله: alienzo7 · دیسکورد: Semsari Game</footer>
+<div class="demo">نسخه دمو</div>
+
+<script>
+const G=[
+{s:'Thunderstrike',f:'a',g:'tbc',t:660,d:2.6,hot:1},{s:'Thunderstrike',f:'h',g:'tbc',t:660,d:2.6},
+{s:'Spineshatter',f:'h',g:'tbc',t:540,d:2.1},{s:'Firemaw',f:'a',g:'era',t:710,d:0},{s:'Retail EU (همه سرورها)',f:'a',g:'retail',t:7600,d:29,u:'1M'},
+{s:'Aion 2',f:'',g:'aion',t:0,d:0}];
+const fa=n=>n.toLocaleString('fa-IR');
+function rg(k){gtb.innerHTML=G.filter(x=>k=='all'||x.g==k).map(x=>`<tr><td>${x.s} ${x.hot?'<span class="hot">🔥 قیمت داغ</span>':''}</td><td>${x.f?`<span class="f ${x.f}">${x.f=='a'?'Alliance':'Horde'}</span>`:'-'}</td><td>${x.u||'1k'}</td><td class="up">${x.t?fa(x.t)+' هزار ت':'استعلام'}</td><td>${x.d?x.d+'$':'-'}</td><td><a class="btn" style="padding:5px 12px;font-size:13px" href="#order">خرید</a></td></tr>`).join('')}
+rg('all');document.querySelectorAll('#gt-tabs .tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('#gt-tabs .tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');rg(b.dataset.g)});
+srv.innerHTML=G.filter(x=>x.t).map((x,i)=>`<option value="${i}">${x.s} ${x.f=='a'?'Ally':x.f=='h'?'Horde':''}</option>`).join('');
+function calc(){const x=G.filter(x=>x.t)[srv.value];tot.textContent=fa(x.t*amt.value)+' هزار تومان'}srv.onchange=amt.oninput=calc;calc();
+const A=[
+{t:'Druid 70 · Spineshatter',f:'a',c:'Ukraine',w:'Mining + Enchant',x:'60% Fly · یک کاراکتر ۷۰ دیگه',p:'۸.۵M گلد'},
+{t:'Mage 70 · Spineshatter',f:'h',c:'EU',w:'Herb / Enchant 350',x:'GS 1650 · ایمیل اورجینال',p:'استعلام'},
+{t:'Mage + Druid 90 · Kazzak',f:'h',c:'Ukraine',w:'Herb / Mine',x:'۸ روز گیم‌تایم',p:'استعلام'},
+{t:'Mage 70 · Spineshatter',f:'a',c:'EU',w:'Herb & Mine & FirstAid',x:'ایمیل اورجینال',p:'استعلام'}];
+accs.innerHTML=A.map(a=>`<div class="card"><span class="f ${a.f}">${a.f=='a'?'Alliance':'Horde'}</span> <span class="badge">تأیید شده</span><h3 style="margin-top:8px">${a.t}</h3><div class="meta"><div><span>کشور</span><span>${a.c}</span></div><div><span>پروفشن</span><span>${a.w}</span></div><div><span>توضیحات</span><span>${a.x}</span></div></div><div class="price">${a.p}</div><a class="btn" href="#order">درخواست خرید</a></div>`).join('');
+function sub(e){e.preventDefault();const c='SG-'+Math.floor(10000+Math.random()*89999);alert('سفارش ثبت شد ✅\nکد پیگیری: '+c+'\n(در نسخه واقعی به ربات دیسکورد/تلگرام ادمین ارسال می‌شود)');code.value=c;return false}
+function trk(){tr.innerHTML=`<div class="card"><b>${code.value||'SG-48213'}</b><div class="meta" style="margin-top:8px"><div><span>✅ ثبت سفارش</span><span>۱۴:۰۲</span></div><div><span>✅ تأیید پرداخت</span><span>۱۴:۰۵</span></div><div><span>⏳ در حال تحویل در بازی</span><span>-</span></div></div></div>`}
+function vf(){const q=vq.value.trim();vr.innerHTML=/alienzo|semsari/i.test(q)?'<div class="card" style="border-color:var(--ok)">✅ این حساب رسمی Semsari Game است.</div>':'<div class="card" style="border-color:var(--bad)">⛔ این اسم در لیست رسمی ما نیست. Trade نکنید و به ادمین گزارش دهید.</div>'}
+</script>
+</body>
+</html>
